@@ -19,7 +19,7 @@
   <entry>
     <title><![CDATA[Linux 删除除指定文件外的其他文件]]></title>
     <url>%2F2017%2F08%2F29%2Fremove-all-but-except-some-files%2F</url>
-    <content type="text"><![CDATA[Find12345# 排除单个文件find . ! -name 'exec.js' -delete# 排除多个文件find . ! -name 'exec.js' -a ! -name '.git' Bash1234567shopt -s extglob# 排除单个文件rm -- !exec.js# 排除多个文件rm -- !(exec.js|.git) Zsh1234567setopt extended_glob# 排除单个文件rm -- ^exec.js# 排除多个文件rm -- ^(exec.js|.git)]]></content>
+    <content type="text"><![CDATA[Find12345# 排除单个文件find . ! -name 'exec.js'# 排除多个文件find . ! -name 'exec.js' -a ! -name '.git' Bash1234567shopt -s extglob# 排除单个文件rm -- !exec.js# 排除多个文件rm -- !(exec.js|.git) Zsh1234567setopt extended_glob# 排除单个文件rm -- ^exec.js# 排除多个文件rm -- ^(exec.js|.git)]]></content>
       <tags>
         <tag>linux</tag>
       </tags>
@@ -37,9 +37,9 @@
     <url>%2F2017%2F06%2F06%2Fnginx-log-rotation%2F</url>
     <content type="text"><![CDATA[前言Nginx 自身并没有日志转储功能，需要由其他程序来完成。这符合 Unix 哲学，专注于一件事并将其做好。 Logrotate 是日志文件管理工具，提供自动转储压缩，删除和邮寄日志文件。 Logrotate 可以设置为每天，每周，每月或当日志文件达到一定大小时处理日志文件。 配置 Logrotate创建 /etc/logrotate.d/nginx，内容如下 123456789/usr/local/nginx/logs/*.log &#123; daily rotate 30 notifempty sharedscripts postrotate kill -USR1 `cat /usr/local/nginx/logs/nginx.pid` endscript&#125; 第一行：转储目录 /usr/local/nginx/logs 下全部 .log 后缀的日志文件。第二行：每天执行。第三行：最多保留 30 份日志。第四行：如果日志为空则不执行。第五行：只执行一次 postrotate 脚本。第六行：开始 postrotate 脚本声明。postrotate 脚本在转储文件后（压缩文件前）马上执行。第七行：通知 Nginx 重新打开日志文件。第八行：结束 postrotate 脚本声明。 测试 Logrotate执行 logrotate -d /etc/logrotate.d/nginx 测试配置是否正确。 常见问题处理日志转储没有执行根据以下步骤定位问题： 执行 logrotate -d /etc/logrotate.d/nginx 测试配置是否正确。 检查 /var/log/cron 日志 logrotate 是否有执行。 检查 cron 守护进程是否正在运行。]]></content>
       <tags>
+        <tag>linux</tag>
         <tag>nginx</tag>
         <tag>logrotate</tag>
-        <tag>linux</tag>
       </tags>
   </entry>
 </search>

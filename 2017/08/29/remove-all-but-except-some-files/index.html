@@ -92,18 +92,18 @@
 
 
 
-<meta name="description" content="Find12345# 排除单个文件find . ! -name &apos;exec.js&apos; -delete# 排除多个文件find . ! -name &apos;exec.js&apos; -a ! -name &apos;.git&apos; Bash1234567shopt -s extglob# 排除单个文件rm -- !exec.js# 排除多个文件rm -- !(exec.js|.git) Zsh1234567setopt exte">
+<meta name="description" content="Find12345# 排除单个文件find . ! -name &apos;exec.js&apos;# 排除多个文件find . ! -name &apos;exec.js&apos; -a ! -name &apos;.git&apos; Bash1234567shopt -s extglob# 排除单个文件rm -- !exec.js# 排除多个文件rm -- !(exec.js|.git) Zsh1234567setopt extended_glo">
 <meta name="keywords" content="linux">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Linux 删除除指定文件外的其他文件">
 <meta property="og:url" content="http://blog.gordianyuan.com/2017/08/29/remove-all-but-except-some-files/index.html">
 <meta property="og:site_name" content="Gordian&#39;s Blog">
-<meta property="og:description" content="Find12345# 排除单个文件find . ! -name &apos;exec.js&apos; -delete# 排除多个文件find . ! -name &apos;exec.js&apos; -a ! -name &apos;.git&apos; Bash1234567shopt -s extglob# 排除单个文件rm -- !exec.js# 排除多个文件rm -- !(exec.js|.git) Zsh1234567setopt exte">
+<meta property="og:description" content="Find12345# 排除单个文件find . ! -name &apos;exec.js&apos;# 排除多个文件find . ! -name &apos;exec.js&apos; -a ! -name &apos;.git&apos; Bash1234567shopt -s extglob# 排除单个文件rm -- !exec.js# 排除多个文件rm -- !(exec.js|.git) Zsh1234567setopt extended_glo">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2017-08-29T09:53:42.000Z">
+<meta property="og:updated_time" content="2017-09-25T06:38:04.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Linux 删除除指定文件外的其他文件">
-<meta name="twitter:description" content="Find12345# 排除单个文件find . ! -name &apos;exec.js&apos; -delete# 排除多个文件find . ! -name &apos;exec.js&apos; -a ! -name &apos;.git&apos; Bash1234567shopt -s extglob# 排除单个文件rm -- !exec.js# 排除多个文件rm -- !(exec.js|.git) Zsh1234567setopt exte">
+<meta name="twitter:description" content="Find12345# 排除单个文件find . ! -name &apos;exec.js&apos;# 排除多个文件find . ! -name &apos;exec.js&apos; -a ! -name &apos;.git&apos; Bash1234567shopt -s extglob# 排除单个文件rm -- !exec.js# 排除多个文件rm -- !(exec.js|.git) Zsh1234567setopt extended_glo">
 
 
 
@@ -323,7 +323,7 @@
       
 
       
-        <h2 id="Find"><a href="#Find" class="headerlink" title="Find"></a>Find</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># 排除单个文件</span></div><div class="line">find . ! -name <span class="string">'exec.js'</span> -delete</div><div class="line"></div><div class="line"><span class="comment"># 排除多个文件</span></div><div class="line">find . ! -name <span class="string">'exec.js'</span> -a ! -name <span class="string">'.git'</span></div></pre></td></tr></table></figure>
+        <h2 id="Find"><a href="#Find" class="headerlink" title="Find"></a>Find</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># 排除单个文件</span></div><div class="line">find . ! -name <span class="string">'exec.js'</span></div><div class="line"></div><div class="line"><span class="comment"># 排除多个文件</span></div><div class="line">find . ! -name <span class="string">'exec.js'</span> -a ! -name <span class="string">'.git'</span></div></pre></td></tr></table></figure>
 <h2 id="Bash"><a href="#Bash" class="headerlink" title="Bash"></a>Bash</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">shopt</span> -s extglob</div><div class="line"></div><div class="line"><span class="comment"># 排除单个文件</span></div><div class="line">rm -- !exec.js</div><div class="line"></div><div class="line"><span class="comment"># 排除多个文件</span></div><div class="line">rm -- !(exec.js|.git)</div></pre></td></tr></table></figure>
 <h2 id="Zsh"><a href="#Zsh" class="headerlink" title="Zsh"></a>Zsh</h2><figure class="highlight zsh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">setopt</span> extended_glob</div><div class="line"></div><div class="line"><span class="comment"># 排除单个文件</span></div><div class="line">rm -- ^exec.js</div><div class="line"></div><div class="line"><span class="comment"># 排除多个文件</span></div><div class="line">rm -- ^(exec.js|.git)</div></pre></td></tr></table></figure>
 
