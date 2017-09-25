@@ -76,7 +76,7 @@
 <link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="nginx,logrotate,linux," />
+  <meta name="keywords" content="algorithm," />
 
 
 
@@ -92,18 +92,20 @@
 
 
 
-<meta name="description" content="前言Nginx 自身并没有日志转储功能，需要由其他程序来完成。这符合 Unix 哲学，专注于一件事并将其做好。 Logrotate 是日志文件管理工具，提供自动转储压缩，删除和邮寄日志文件。 Logrotate 可以设置为每天，每周，每月或当日志文件达到一定大小时处理日志文件。 配置 Logrotate创建 /etc/logrotate.d/nginx，内容如下 123456789/usr/loc">
-<meta name="keywords" content="nginx,logrotate,linux">
+<meta name="description" content="问题有 N 个等高不等长的长方形，排列成 2 行。求 2 行长度差值最小的情况下长那行的长度。例如 {2，2，3}，结果为 4。  答案计算出全部符合条件的组合数，再找出最大的组合数。 12345678910111213141516171819202122public class NChooseK &amp;#123;  private static long findOptimum(List&amp;lt;In">
+<meta name="keywords" content="algorithm">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Nginx 日志转储">
-<meta property="og:url" content="http://blog.gordianyuan.com/2017/06/06/nginx-log-rotation/index.html">
+<meta property="og:title" content="选择数组中最佳组合算法">
+<meta property="og:url" content="http://blog.gordianyuan.com/2017/09/22/n-choose-k/index.html">
 <meta property="og:site_name" content="Gordian&#39;s Blog">
-<meta property="og:description" content="前言Nginx 自身并没有日志转储功能，需要由其他程序来完成。这符合 Unix 哲学，专注于一件事并将其做好。 Logrotate 是日志文件管理工具，提供自动转储压缩，删除和邮寄日志文件。 Logrotate 可以设置为每天，每周，每月或当日志文件达到一定大小时处理日志文件。 配置 Logrotate创建 /etc/logrotate.d/nginx，内容如下 123456789/usr/loc">
+<meta property="og:description" content="问题有 N 个等高不等长的长方形，排列成 2 行。求 2 行长度差值最小的情况下长那行的长度。例如 {2，2，3}，结果为 4。  答案计算出全部符合条件的组合数，再找出最大的组合数。 12345678910111213141516171819202122public class NChooseK &amp;#123;  private static long findOptimum(List&amp;lt;In">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2017-06-06T15:39:18.000Z">
+<meta property="og:image" content="http://blog.gordianyuan.com/2017/09/22/n-choose-k/question.jpg">
+<meta property="og:updated_time" content="2017-09-25T06:27:49.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Nginx 日志转储">
-<meta name="twitter:description" content="前言Nginx 自身并没有日志转储功能，需要由其他程序来完成。这符合 Unix 哲学，专注于一件事并将其做好。 Logrotate 是日志文件管理工具，提供自动转储压缩，删除和邮寄日志文件。 Logrotate 可以设置为每天，每周，每月或当日志文件达到一定大小时处理日志文件。 配置 Logrotate创建 /etc/logrotate.d/nginx，内容如下 123456789/usr/loc">
+<meta name="twitter:title" content="选择数组中最佳组合算法">
+<meta name="twitter:description" content="问题有 N 个等高不等长的长方形，排列成 2 行。求 2 行长度差值最小的情况下长那行的长度。例如 {2，2，3}，结果为 4。  答案计算出全部符合条件的组合数，再找出最大的组合数。 12345678910111213141516171819202122public class NChooseK &amp;#123;  private static long findOptimum(List&amp;lt;In">
+<meta name="twitter:image" content="http://blog.gordianyuan.com/2017/09/22/n-choose-k/question.jpg">
 
 
 
@@ -132,13 +134,13 @@
 
 
 
-  <link rel="canonical" href="http://blog.gordianyuan.com/2017/06/06/nginx-log-rotation/"/>
+  <link rel="canonical" href="http://blog.gordianyuan.com/2017/09/22/n-choose-k/"/>
 
 
 
 
 
-  <title>Nginx 日志转储 | Gordian's Blog</title>
+  <title>选择数组中最佳组合算法 | Gordian's Blog</title>
   
 
 
@@ -245,7 +247,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://blog.gordianyuan.com/2017/06/06/nginx-log-rotation/">
+    <link itemprop="mainEntityOfPage" href="http://blog.gordianyuan.com/2017/09/22/n-choose-k/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Gordian Yuan">
@@ -262,7 +264,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Nginx 日志转储</h1>
+          <h1 class="post-title" itemprop="name headline">选择数组中最佳组合算法</h1>
         
 
         <div class="post-meta">
@@ -274,8 +276,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-06-06T20:14:26+08:00">
-                2017-06-06
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-09-22T17:04:26+08:00">
+                2017-09-22
               </time>
             
 
@@ -293,9 +295,9 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2017/06/06/nginx-log-rotation/#comments" itemprop="discussionUrl">
+                <a href="/2017/09/22/n-choose-k/#comments" itemprop="discussionUrl">
                   <span class="post-comments-count disqus-comment-count"
-                        data-disqus-identifier="2017/06/06/nginx-log-rotation/" itemprop="commentCount"></span>
+                        data-disqus-identifier="2017/09/22/n-choose-k/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -323,18 +325,10 @@
       
 
       
-        <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p><a href="https://nginx.org" target="_blank" rel="external">Nginx</a> 自身并没有日志转储功能，需要由其他程序来完成。这符合 Unix 哲学，专注于一件事并将其做好。</p>
-<p><a href="https://github.com/logrotate/logrotate" target="_blank" rel="external">Logrotate</a> 是日志文件管理工具，提供自动转储压缩，删除和邮寄日志文件。 Logrotate 可以设置为每天，每周，每月或当日志文件达到一定大小时处理日志文件。</p>
-<h2 id="配置-Logrotate"><a href="#配置-Logrotate" class="headerlink" title="配置 Logrotate"></a>配置 Logrotate</h2><p>创建 <code>/etc/logrotate.d/nginx</code>，内容如下</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">/usr/local/nginx/logs/*.log &#123;</div><div class="line">  daily</div><div class="line">  rotate 30</div><div class="line">  notifempty</div><div class="line">  sharedscripts</div><div class="line">  postrotate</div><div class="line">    kill -USR1 `cat /usr/local/nginx/logs/nginx.pid`</div><div class="line">  endscript</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>第一行：转储目录 <code>/usr/local/nginx/logs</code> 下全部 .log 后缀的日志文件。<br>第二行：每天执行。<br>第三行：最多保留 30 份日志。<br>第四行：如果日志为空则不执行。<br>第五行：只执行一次 postrotate 脚本。<br>第六行：开始 postrotate 脚本声明。postrotate 脚本在转储文件后（压缩文件前）马上执行。<br>第七行：通知 Nginx 重新打开日志文件。<br>第八行：结束 postrotate 脚本声明。</p>
-<h2 id="测试-Logrotate"><a href="#测试-Logrotate" class="headerlink" title="测试 Logrotate"></a>测试 Logrotate</h2><p>执行 <code>logrotate -d /etc/logrotate.d/nginx</code> 测试配置是否正确。</p>
-<h2 id="常见问题处理"><a href="#常见问题处理" class="headerlink" title="常见问题处理"></a>常见问题处理</h2><h3 id="日志转储没有执行"><a href="#日志转储没有执行" class="headerlink" title="日志转储没有执行"></a>日志转储没有执行</h3><p>根据以下步骤定位问题：</p>
-<ol>
-<li>执行 <code>logrotate -d /etc/logrotate.d/nginx</code> 测试配置是否正确。</li>
-<li>检查 <code>/var/log/cron</code> 日志 logrotate 是否有执行。</li>
-<li>检查 cron 守护进程是否正在运行。</li>
-</ol>
+        <h2 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h2><p>有 N 个等高不等长的长方形，排列成 2 行。求 2 行长度差值最小的情况下长那行的长度。例如 {2，2，3}，结果为 4。</p>
+<img src="/2017/09/22/n-choose-k/question.jpg" alt="[问题]" title="[问题]">
+<h2 id="答案"><a href="#答案" class="headerlink" title="答案"></a>答案</h2><p>计算出全部符合条件的组合数，再找出最大的组合数。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">NChooseK</span> </span>&#123;</div><div class="line"></div><div class="line">  <span class="function"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">long</span> <span class="title">findOptimum</span><span class="params">(List&lt;Integer&gt; numbers, <span class="keyword">long</span> maxSum)</span> </span>&#123;</div><div class="line">    Set&lt;Integer&gt; sums = <span class="keyword">new</span> HashSet&lt;&gt;(Collections.singletonList(<span class="number">0</span>));</div><div class="line">    numbers.forEach(number -&gt; &#123;</div><div class="line">      Set&lt;Integer&gt; subSums = sums.stream().map(sum -&gt; sum + number)</div><div class="line">          .filter(newSum -&gt; newSum &lt;= maxSum).collect(toSet());</div><div class="line">      sums.addAll(subSums);</div><div class="line">    &#125;);</div><div class="line">    <span class="keyword">return</span> sums.stream().mapToLong(i -&gt; i).max().orElse(<span class="number">0</span>);</div><div class="line">  &#125;</div><div class="line"></div><div class="line">  <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</div><div class="line">    List&lt;Integer&gt; numbers = Arrays.asList(<span class="number">3</span>, <span class="number">7</span>, <span class="number">7</span>, <span class="number">5</span>, <span class="number">4</span>);</div><div class="line">    <span class="keyword">long</span> sum = numbers.stream().mapToLong(i -&gt; i).sum();</div><div class="line">    <span class="keyword">long</span> mid = sum / <span class="number">2</span>;</div><div class="line">    <span class="keyword">long</span> optimum = findOptimum(numbers, mid);</div><div class="line">    <span class="keyword">long</span> answer = sum - optimum;</div><div class="line">    System.out.println(<span class="string">"Answer is "</span> + answer);</div><div class="line">  &#125;</div><div class="line"></div><div class="line">&#125;</div></pre></td></tr></table></figure>
 
       
     </div>
@@ -352,11 +346,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/nginx/" rel="tag"># nginx</a>
-          
-            <a href="/tags/logrotate/" rel="tag"># logrotate</a>
-          
-            <a href="/tags/linux/" rel="tag"># linux</a>
+            <a href="/tags/algorithm/" rel="tag"># algorithm</a>
           
         </div>
       
@@ -369,15 +359,15 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
+              <a href="/2017/09/07/postman-installation-guide/" rel="next" title="Postman 离线安装指南">
+                <i class="fa fa-chevron-left"></i> Postman 离线安装指南
+              </a>
+            
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/08/17/reset-omnifocus-database/" rel="prev" title="重置 OmniFocus 数据库">
-                重置 OmniFocus 数据库 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -522,7 +512,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#配置-Logrotate"><span class="nav-number">2.</span> <span class="nav-text">配置 Logrotate</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#测试-Logrotate"><span class="nav-number">3.</span> <span class="nav-text">测试 Logrotate</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#常见问题处理"><span class="nav-number">4.</span> <span class="nav-text">常见问题处理</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#日志转储没有执行"><span class="nav-number">4.1.</span> <span class="nav-text">日志转储没有执行</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#问题"><span class="nav-number">1.</span> <span class="nav-text">问题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#答案"><span class="nav-number">2.</span> <span class="nav-text">答案</span></a></li></ol></div>
             
 
           </div>
@@ -682,9 +672,9 @@
     
       <script type="text/javascript">
         var disqus_config = function () {
-          this.page.url = 'http://blog.gordianyuan.com/2017/06/06/nginx-log-rotation/';
-          this.page.identifier = '2017/06/06/nginx-log-rotation/';
-          this.page.title = 'Nginx 日志转储';
+          this.page.url = 'http://blog.gordianyuan.com/2017/09/22/n-choose-k/';
+          this.page.identifier = '2017/09/22/n-choose-k/';
+          this.page.title = '选择数组中最佳组合算法';
         };
         var d = document, s = d.createElement('script');
         s.src = 'https://gordianyuan-blog.disqus.com/embed.js';

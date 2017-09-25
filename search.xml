@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[选择数组中最佳组合算法]]></title>
+    <url>%2F2017%2F09%2F22%2Fn-choose-k%2F</url>
+    <content type="text"><![CDATA[问题有 N 个等高不等长的长方形，排列成 2 行。求 2 行长度差值最小的情况下长那行的长度。例如 {2，2，3}，结果为 4。 答案计算出全部符合条件的组合数，再找出最大的组合数。 12345678910111213141516171819202122public class NChooseK &#123; private static long findOptimum(List&lt;Integer&gt; numbers, long maxSum) &#123; Set&lt;Integer&gt; sums = new HashSet&lt;&gt;(Collections.singletonList(0)); numbers.forEach(number -&gt; &#123; Set&lt;Integer&gt; subSums = sums.stream().map(sum -&gt; sum + number) .filter(newSum -&gt; newSum &lt;= maxSum).collect(toSet()); sums.addAll(subSums); &#125;); return sums.stream().mapToLong(i -&gt; i).max().orElse(0); &#125; public static void main(String[] args) &#123; List&lt;Integer&gt; numbers = Arrays.asList(3, 7, 7, 5, 4); long sum = numbers.stream().mapToLong(i -&gt; i).sum(); long mid = sum / 2; long optimum = findOptimum(numbers, mid); long answer = sum - optimum; System.out.println("Answer is " + answer); &#125;&#125;]]></content>
+      <tags>
+        <tag>algorithm</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[Postman 离线安装指南]]></title>
     <url>%2F2017%2F09%2F07%2Fpostman-installation-guide%2F</url>
     <content type="text"><![CDATA[下载访问 https://www.crx4chrome.com/crx/1058 ，点击「Crx4Chrome」下载 Postman 离线安装包。 解压 修改离线安装包扩展名 .ctx 为 .zip。 解压到 C:\Chrome\postman （可更改为任意目录）。 重命名 _metadata 文件夹为 metadata。 安装 浏览器地址栏输入 chrome://extensions 打开扩展管理页面。 勾选页面右上角的「开发者模式」选项。 点击「加载已解压的扩展程序」，选择 C:\Chrome\postman 并确定。 使用 浏览器地址栏输入 chrome://apps 打开应用页面。 点击 Postman 应用。 如果弹出注册页面，点击页面最底部「Take me straight to the app …」。]]></content>
